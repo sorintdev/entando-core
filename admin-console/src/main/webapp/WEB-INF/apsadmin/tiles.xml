@@ -224,6 +224,11 @@
         <put-attribute name="title" value="title.pageManagement" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/editFrame.jsp" />
     </definition>
+    
+     <definition extends="layout.default" name="admin.Design.main">
+        <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/design/designPage.jsp" />
+    </definition>
 
     <!-- INIZIO Area Gestione Configurazione Widget Speciali -->
 
@@ -349,7 +354,7 @@
         <put-attribute name="title" value="title.categoryManagement" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/category/categoryDetails.jsp" />
     </definition>
-	
+
     <definition extends="layout.default" name="admin.Category.moveReferences">
         <put-attribute name="title" value="title.categoryManagement" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/category/categoryMoveReferences.jsp" />

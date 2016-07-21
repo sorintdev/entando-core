@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+    <package name="core_do/Design" namespace="/do/Design" extends="core_do/Page">
+    	
+    	<global-results>
+    		<result name="pageTree" type="chain">viewTree</result>
+    	</global-results>
+    
+         <action name="design" class="pageAction" >
+            <result type="tiles">admin.Design.main</result>
+            <interceptor-ref name="entandoDefaultStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
+        </action>
+        
+        <!-- ######### FINE OPERAZIONI CONFIGURAZIONE FRAME PAGINA ######### -->
+        
+    </package>
+    
+</struts>
