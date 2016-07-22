@@ -5,18 +5,16 @@
 
 <struts>
 	
-    <package name="core_do/Design" namespace="/do/Design" extends="core_do/Page">
+    <package name="core_do/Design" namespace="/do/Design" extends="entando-default">
     	
     	<global-results>
     		<result name="pageTree" type="chain">viewTree</result>
     	</global-results>
     
-         <action name="design" class="pageAction" >
+         <action name="design" >
             <result type="tiles">admin.Design.main</result>
             <interceptor-ref name="entandoDefaultStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
         </action>
-        
-        <!-- ######### FINE OPERAZIONI CONFIGURAZIONE FRAME PAGINA ######### -->
         
     </package>
     
