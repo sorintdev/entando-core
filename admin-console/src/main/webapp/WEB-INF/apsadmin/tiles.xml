@@ -248,6 +248,8 @@
 
     <definition extends="layout.default" name="admin.Portal.viewWidgets">
         <put-attribute name="title" value="title.widgetManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/widget-list.jsp" />
     </definition>
 	<!-- admin.Portal.viewShowlets - deprecated -->
@@ -277,51 +279,61 @@
 	
     <definition extends="layout.default" name="admin.Portal.GuiFragment.list">
 		<put-attribute name="title" value="title.guiFragmentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/guifragment/guiFragment-list.jsp" />
 	</definition>
 	
     <definition extends="layout.default" name="admin.Portal.GuiFragment.entry">
 		<put-attribute name="title" value="title.guiFragmentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/guifragment/guiFragment-entry.jsp" />
 	</definition>
 	
     <definition extends="layout.default" name="admin.Portal.GuiFragment.trash">
 		<put-attribute name="title" value="title.guiFragmentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/guifragment/guiFragment-trash.jsp" />
 	</definition>
 
     <definition extends="layout.default" name="admin.Portal.GuiFragment.detail">
 		<put-attribute name="title" value="title.guiFragmentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/guifragment/guiFragment-detail.jsp" />
 	</definition>
 
     <definition extends="layout.default" name="admin.Portal.GuiFragment.references">
 		<put-attribute name="title" value="title.guiFragmentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/guifragment/guiFragment-references.jsp" />
 	</definition>
 	
     <definition extends="layout.default" name="admin.PageModel.list">
         <put-attribute name="title" value="title.pageModelManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/model/pageModel-list.jsp" />
     </definition>
 	
     <definition extends="layout.default" name="admin.PageModel.entry">
         <put-attribute name="title" value="title.pageModelManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/model/pageModel-entry.jsp" />
     </definition>
 	
     <definition extends="layout.default" name="admin.PageModel.details">
         <put-attribute name="title" value="title.pageModelManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/model/pageModel-details.jsp" />
     </definition>
 	
 	<definition extends="layout.default" name="admin.PageModel.trash">
         <put-attribute name="title" value="title.pageModelManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/model/pageModel-trash.jsp" />
     </definition>
 	
 	<definition extends="layout.default" name="admin.PageModel.references">
         <put-attribute name="title" value="title.pageModelManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/model/pageModel-references.jsp" />
     </definition>
 	
@@ -424,14 +436,17 @@
 
     <definition extends="layout.settings" name="admin.LocaleString.intro">
         <put-attribute name="title" value="title.languageAdmin" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/localestring/localeString-intro.jsp" />
     </definition>
     <definition extends="layout.settings" name="admin.LocaleString.summary">
         <put-attribute name="title" value="title.languageAdmin.labels" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/localestring/localeStringFinding.jsp" />
     </definition>
     <definition extends="layout.settings" name="admin.LocaleString.entry">
         <put-attribute name="title" value="title.languageAdmin.labels" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/localestring/localeStringEntry.jsp" />
     </definition>
 
@@ -441,45 +456,55 @@
 
     <definition extends="layout.default" name="admin.entityManagement.viewManagers">
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/manager-list.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.search">
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/entityFinding.jsp" />
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entityFinding.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.viewEntityTypes">
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entity-type-list.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.entryEntityType">
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entity-type-entry.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.entryEntityAttributeType">
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/calendar.jsp" />
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/attribute-type-entry.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.removeEntityTypeConfirm">
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entity-type-delete-confirm.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.removeEntityTypeWithReferences">
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entity-type-references-list.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.textListElement.entryEntityAttributeType">
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/attribute-type-entry-element.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.compositeAttribute.entry">
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/attribute-type-entry-composite.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.compositeAttribute.entryAttributeElementType">
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/calendar.jsp" />
         <put-attribute name="title" value="title.entityManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/attribute-type-entry-composite-element.jsp" />
     </definition>
 
