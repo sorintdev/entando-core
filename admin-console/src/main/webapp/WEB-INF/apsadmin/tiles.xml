@@ -231,6 +231,12 @@
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/designPage.jsp" />
     </definition>
 
+    <definition extends="layout.default" name="admin.ContentsMedia.main">
+        <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
+        <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/contentsAndMedia.jsp" />
+    </definition>
+
     <!-- INIZIO Area Gestione Configurazione Widget Speciali -->
 
     <definition extends="layout.default" name="admin.Page.Showlet.configSimpleParameter">

@@ -7,15 +7,21 @@
 	
     <package name="core_do/Design" namespace="/do/Design" extends="entando-default">
     	
-    	<global-results>
-    		<result name="pageTree" type="chain">viewTree</result>
-    	</global-results>
-    
-         <action name="design" >
+        <action name="list" >
             <result type="tiles">admin.Design.main</result>
             <interceptor-ref name="entandoDefaultStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
         </action>
         
+    </package>
+    
+    
+    <package name="core_do/ContentsAndMedia" namespace="/do/ContentsAndMedia" extends="entando-default">
+    	
+        <action name="list" >
+            <result type="tiles">admin.ContentsMedia.main</result>
+            <interceptor-ref name="entandoDefaultStack"><param name="requestAuth.requiredPermission">managePages</param></interceptor-ref>
+        </action>
+    
     </package>
     
 </struts>
