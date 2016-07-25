@@ -9,24 +9,29 @@
 
     <definition extends="layout.default" name="admin.jacms.content.intro">
 		<put-attribute name="title" value="title.contentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/content-intro.jsp" />
 	</definition>
     <definition extends="layout.default" name="admin.jacms.content.list">
 		<put-attribute name="title" value="title.contentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="extraResources" value="/WEB-INF/plugins/jacms/apsadmin/jsp/common/layouts/assets-more/content_contentFinding.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/contentFinding.jsp" />
 	</definition>
 	<definition extends="layout.default" name="admin.jacms.content.trash">
 		<put-attribute name="title" value="title.contentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/trashContent.jsp" />
 	</definition>
 	<definition extends="layout.default" name="admin.jacms.content.inspect">
 		<put-attribute name="title" value="title.contentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="extraResources" value="/WEB-INF/plugins/jacms/apsadmin/jsp/common/layouts/assets-more/content.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/contentDetails.jsp" />
 	</definition>
 	<definition extends="layout.default" name="admin.jacms.content.entry">
 		<put-attribute name="title" value="title.contentManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="extraResources" value="/WEB-INF/plugins/jacms/apsadmin/jsp/common/layouts/assets-more/content.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/entryContent.jsp" />
 	</definition>
@@ -73,19 +78,23 @@
     <!-- ********* INIZIO Area Gestione Modelli di Contenuto ********* -->
     <definition extends="layout.default" name="admin.jacms.contentModel.list">
 		<put-attribute name="title" value="title.contentModels" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/model/modelFinding.jsp" />
 	</definition>
     <definition extends="layout.default" name="admin.jacms.contentModel.entry">
 		<put-attribute name="title" value="title.contentModels" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="extraResources" value="/WEB-INF/plugins/jacms/apsadmin/jsp/common/layouts/assets-more/content_entryModel.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/model/entryModel.jsp" />
 	</definition>
     <definition extends="layout.default" name="admin.jacms.contentModel.reference">
 		<put-attribute name="title" value="title.contentModels" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/model/modelReferences.jsp" />
 	</definition>
     <definition extends="layout.default" name="admin.jacms.contentModel.trash">
 		<put-attribute name="title" value="title.contentModels" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/content/model/trashModel.jsp" />
 	</definition>
 
@@ -95,25 +104,30 @@
 
     <definition extends="layout.default" name="admin.jacms.resource.Image.list">
 		<put-attribute name="title" value="title.resourceManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="extraResources" value="/WEB-INF/plugins/jacms/apsadmin/jsp/common/layouts/assets-more/resource.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/resource/imageArchive.jsp" />
 	</definition>
 	<definition extends="layout.default" name="admin.jacms.resource.Attach.list">
 		<put-attribute name="title" value="title.resourceManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="extraResources" value="/WEB-INF/plugins/jacms/apsadmin/jsp/common/layouts/assets-more/resource.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/resource/attachArchive.jsp" />
 	</definition>
 	<definition extends="layout.default" name="admin.jacms.resource.entry">
 		<put-attribute name="title" value="title.resourceManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="extraResources" value="/WEB-INF/plugins/jacms/apsadmin/jsp/common/layouts/assets-more/resource.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/resource/entryResource.jsp" />
 	</definition>
 	<definition extends="layout.default" name="admin.jacms.resource.references">
 		<put-attribute name="title" value="title.resourceManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/resource/resourceReferences.jsp" />
 	</definition>
 	<definition extends="layout.default" name="admin.jacms.resource.trash">
 		<put-attribute name="title" value="title.resourceManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/resource/trashResource.jsp" />
 	</definition>
 
@@ -180,11 +194,13 @@
 	<!-- ********* INIZIO Area Gestione Entità ********* -->
 	<definition extends="layout.default" name="admin.jacms.entityManagement.viewEntityTypes">
 		<put-attribute name="title" value="title.entityManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/entity/entity-type-list.jsp" />
 	</definition>
 
-    <definition extends="layout.default" name="admin.jacms.entityManagement.viewEntityType">
+        <definition extends="layout.default" name="admin.jacms.entityManagement.viewEntityType">
 		<put-attribute name="title" value="title.entityManagement" />
+                <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuContentsAndMedia.jsp" />
 		<put-attribute name="body" value="/WEB-INF/plugins/jacms/apsadmin/jsp/entity/content-type-entry.jsp" />
 	</definition>
     <!-- ********* FINE Area Gestione Entità ********* -->
