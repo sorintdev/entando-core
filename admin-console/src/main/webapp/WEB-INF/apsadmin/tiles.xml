@@ -187,41 +187,50 @@
 
     <definition extends="layout.default" name="admin.Page.viewTree">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/pageTree.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/pageTree.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Page.entry">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/entryPage.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Page.trash">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/trashPage.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Page.references">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/pageReferences.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Page.detail">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/detailPage.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Page.searchResult">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/pageSearchResult.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/pageSearchResult.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.Page.configure">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/configPage.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Page.showlet.trash">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/position-clear-confirm.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Page.editFrame">
         <put-attribute name="title" value="title.pageManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/pagesMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/editFrame.jsp" />
     </definition>
     
