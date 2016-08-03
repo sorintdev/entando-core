@@ -264,7 +264,6 @@
     <definition extends="layout.default" name="admin.Portal.viewWidgets">
         <put-attribute name="title" value="title.widgetManagement" />
         <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
-        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/widget-list.jsp" />
     </definition>
 	<!-- admin.Portal.viewShowlets - deprecated -->
@@ -272,6 +271,7 @@
 	
     <definition extends="layout.default" name="admin.Portal.viewWidgetUtilizers">
         <put-attribute name="title" value="title.widgetManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/widget-list-using.jsp" />
     </definition>
 	<!-- admin.Portal.viewShowletUtilizers - deprecated -->
@@ -279,6 +279,7 @@
 	
     <definition extends="layout.default" name="admin.Portal.widgetType.trash">
         <put-attribute name="title" value="title.widgetManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/widget-delete-confirm.jsp" />
     </definition>
 	<!-- admin.Portal.showletType.trash - deprecated -->
@@ -286,6 +287,7 @@
 	
     <definition extends="layout.default" name="admin.Portal.widgetType.entry">
         <put-attribute name="title" value="title.widgetManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/portal/widget-entry.jsp" />
     </definition>
 	<!-- admin.Portal.showletType.entry - deprecated -->
