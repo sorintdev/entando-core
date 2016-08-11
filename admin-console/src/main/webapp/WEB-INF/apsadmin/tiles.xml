@@ -52,33 +52,40 @@
     <definition extends="layout.settings" name="admin.User.list">
         <put-attribute name="title" value="title.userManagement" />
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/user-list.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/user-list.jsp" />
     </definition>
     <definition extends="layout.settings" name="admin.User.entry">
         <put-attribute name="title" value="title.userManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/entryUser.jsp" />
     </definition>
     <definition extends="layout.settings" name="admin.User.trash">
         <put-attribute name="title" value="title.userManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/trashUser.jsp" />
     </definition>
 	
     <definition extends="layout.settings" name="admin.UserAuthorization.entry">
         <put-attribute name="title" value="title.userManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/user-authorizations.jsp" />
     </definition>
 	
 	<definition extends="layout.settings" name="admin.UserProfile.view">
         <put-attribute name="title" value="title.userManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/profile-view.jsp" />
     </definition>
     <definition extends="layout.settings" name="admin.UserProfile.chooseType">
         <put-attribute name="title" value="title.userManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/profile-chooseType.jsp" />
     </definition>
     <definition extends="layout.settings" name="admin.UserProfile.entry">
         <put-attribute name="title" value="title.userManagement" />
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/profile-entry.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/profile-entry.jsp" />
     </definition>
 	
@@ -88,22 +95,27 @@
 	
     <definition extends="layout.default" name="admin.Role.list">
         <put-attribute name="title" value="title.roleManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/role/roleFinding.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Role.entry">
         <put-attribute name="title" value="title.roleManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/role/entryRole.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Role.trash">
         <put-attribute name="title" value="title.roleManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/role/trashRole.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Role.references">
         <put-attribute name="title" value="title.roleManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/role/roleReferences.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Role.view">
         <put-attribute name="title" value="title.roleManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/role/viewRole.jsp" />
     </definition>
 
@@ -113,22 +125,27 @@
 
     <definition extends="layout.default" name="admin.Group.list">
         <put-attribute name="title" value="title.groupManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/group/groupFinding.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Group.entry">
         <put-attribute name="title" value="title.groupManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/group/entryGroup.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Group.trash">
         <put-attribute name="title" value="title.groupManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/group/trashGroup.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Group.references">
         <put-attribute name="title" value="title.groupManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/group/groupReferences.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.Group.detail">
         <put-attribute name="title" value="title.groupManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/user/group/groupDetails.jsp" />
     </definition>
 
@@ -140,44 +157,52 @@
 
     <definition extends="layout.default" name="admin.api.resource.list">
         <put-attribute name="title" value="title.apiManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/resource-list.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.api.resource.detail">
         <put-attribute name="title" value="title.apiManagement" />
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/api-resource-detail-extras.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/resource-detail.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.api.service.list">
         <put-attribute name="title" value="title.apiManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/service-list.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.api.service.entry">
         <put-attribute name="title" value="title.apiManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/service-entry.jsp" />
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/api-service-entry-extras.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.api.service.trash">
         <put-attribute name="title" value="title.apiManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/service-delete-confirm.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.api.consumer.list">
         <put-attribute name="title" value="title.apiManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/consumer-list.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.api.consumer.entry">
         <put-attribute name="title" value="title.apiManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/calendar.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/consumer-entry.jsp" />
     </definition>
 
     <definition extends="layout.default" name="admin.api.consumer.trash">
         <put-attribute name="title" value="title.apiManagement" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/apiMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/api/consumer-delete-confirm.jsp" />
     </definition>
 
@@ -397,6 +422,7 @@
 
     <definition extends="layout.settings" name="admin.BaseAdmin.settings">
         <put-attribute name="title" value="title.generalSettings.settings" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/settingsMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/settings.jsp" />
     </definition>
 
@@ -415,26 +441,31 @@
 
     <definition extends="layout.settings" name="admin.database.entry">
         <put-attribute name="title" value="menu.database.admin" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/settingsMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/database-admin.jsp" />
     </definition>
 
     <definition extends="layout.settings" name="admin.database.backup.details">
         <put-attribute name="title" value="menu.database.admin" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/settingsMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/database-backup-details.jsp" />
     </definition>
 
     <definition extends="layout.settings" name="admin.database.backup.trash">
         <put-attribute name="title" value="menu.database.admin" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/settingsMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/database-backup-trash.jsp" />
     </definition>
 
     <definition extends="layout.settings" name="admin.database.backup.intro">
         <put-attribute name="title" value="menu.database.admin" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/settingsMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/database-backup-intro.jsp" />
     </definition>
 
     <definition extends="layout.settings" name="admin.database.restore.intro">
         <put-attribute name="title" value="menu.database.admin" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/settingsMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/database-restore-intro.jsp" />
     </definition>
 
@@ -444,6 +475,7 @@
 
     <definition extends="layout.settings" name="admin.Lang.summary">
         <put-attribute name="title" value="title.languageAdmin" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/settingsMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/admin/lang/langFinding.jsp" />
     </definition>
 
@@ -479,17 +511,17 @@
     <definition extends="layout.default" name="admin.entityManagement.search">
         <put-attribute name="extraResources" value="/WEB-INF/apsadmin/jsp/common/layouts/assets-more/entityFinding.jsp" />
         <put-attribute name="title" value="title.entityManagement" />
-        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entityFinding.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.viewEntityTypes">
         <put-attribute name="title" value="title.entityManagement" />
-        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entity-type-list.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.entryEntityType">
         <put-attribute name="title" value="title.entityManagement" />
-        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/menuDesignPage.jsp" />
+        <put-attribute name="menu" value="/WEB-INF/apsadmin/jsp/common/tiles-inserts/usersMenu.jsp" />
         <put-attribute name="body" value="/WEB-INF/apsadmin/jsp/entity/entity-type-entry.jsp" />
     </definition>
     <definition extends="layout.default" name="admin.entityManagement.entryEntityAttributeType">
