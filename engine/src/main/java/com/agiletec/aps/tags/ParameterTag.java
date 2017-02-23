@@ -45,7 +45,6 @@ public class ParameterTag extends BodyTagSupport {
 			parentTag.addParameter(this.getName(), value);
 		} catch (Throwable t) {
 			_logger.error("Error closing tag", t);
-			//ApsSystemUtils.logThrowable(t, this, "doEndTag");
 			throw new JspException("Error closing tag ", t);
 		}
 		return super.doEndTag();

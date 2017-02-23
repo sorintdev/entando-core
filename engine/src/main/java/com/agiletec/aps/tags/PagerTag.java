@@ -53,7 +53,6 @@ public class PagerTag extends TagSupport {
 			}
 		} catch (Throwable t) {
 			_logger.error("Error detected during tag initialization", t);
-			//ApsSystemUtils.logThrowable(e, this, "doStartTag");
 			throw new JspException("Error detected during tag initialization", t);
 		}
 		return EVAL_BODY_INCLUDE;

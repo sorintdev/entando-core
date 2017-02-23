@@ -23,6 +23,7 @@ import org.slf4j.LoggerFactory;
 import com.agiletec.aps.system.SystemConstants;
 import com.agiletec.aps.system.common.entity.model.attribute.ITextAttribute;
 import com.agiletec.aps.util.ApsWebApplicationUtils;
+import org.owasp.esapi.ESAPI;
 
 /**
  * User Profile tag.
@@ -56,12 +57,11 @@ public class UserProfileAttributeTag extends ExtendedTagSupport {
                 if (this.getEscapeXml()) {
                     out(this.pageContext, this.getEscapeXml(), value);
                 } else {
-                    this.pageContext.getOut().print(value);
+                    this.pageContext.getOut().print(ESAPI.encoder().encodeForHTML(value.toString()));
                 }
             }
         } catch (Throwable t) {
         	_logger.error("error in doStartTag", t);
-            //ApsSystemUtils.logThrowable(t, this, "doStartTag");
             throw new JspException("Error during tag initialization", t);
         }
         return super.doStartTag();

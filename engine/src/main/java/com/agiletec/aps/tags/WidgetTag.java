@@ -26,32 +26,30 @@ import com.agiletec.aps.system.services.page.IPage;
 
 /**
  * Includes the jsp associated to the widget as configured in the page frame
- * 
  */
 public class WidgetTag extends TagSupport {
 
 	private static final Logger _logger = LoggerFactory.getLogger(WidgetTag.class);
 	
+	@Override
 	public int doEndTag() throws JspException {
 		ServletRequest req =  this.pageContext.getRequest();
 		RequestContext reqCtx = (RequestContext) req.getAttribute(RequestContext.REQCTX);
 		IPage page = (IPage) reqCtx.getExtraParam(SystemConstants.EXTRAPAR_CURRENT_PAGE);
 		try {
-			String showletOutput[] = (String[]) reqCtx.getExtraParam("ShowletOutput");
-			if(_frame <0 || _frame >= showletOutput.length){
+			String widgetOutput[] = (String[]) reqCtx.getExtraParam("ShowletOutput");
+			if(_frame <0 || _frame >= widgetOutput.length){
 				_logger.error("Frame attribute {} exceeds the limit in the page {}", _frame, page.getCode());
 				String msg = "Frame attribute =" + _frame + " exceeds the limit in the page " + page.getCode();
-				throw new JspException(msg);
-				//ApsSystemUtils.getLogger().error(msg);				
+				throw new JspException(msg);			
 			}
-			String showlet = showletOutput[_frame];
-			if (null == showlet) 
-				showlet = "";
-			this.pageContext.getOut().print(showlet);
+			String widget = widgetOutput[_frame];
+			if (null == widget) 
+				widget = "";
+			this.pageContext.getOut().print(widget);
 		} catch (Throwable t) {
 			String msg = "Error detected in the inclusion of the output widget";
-			_logger.error("Error detected in the inclusion of the output widget", t);
-			//ApsSystemUtils.logThrowable(t, this, "doEndTag", msg);
+			_logger.error(msg, t);
 			throw new JspException(msg, t);
 		}
 		

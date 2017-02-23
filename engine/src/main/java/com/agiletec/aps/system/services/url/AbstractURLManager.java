@@ -18,6 +18,10 @@ import java.util.Map;
 
 import com.agiletec.aps.system.RequestContext;
 import com.agiletec.aps.system.common.AbstractService;
+import javax.servlet.jsp.JspException;
+import org.owasp.esapi.ESAPI;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * Servizio di creazione di URL alle risorse del sistema. Per ora è previsto
@@ -30,6 +34,8 @@ import com.agiletec.aps.system.common.AbstractService;
  * @author M.Diana
  */
 public abstract class AbstractURLManager extends AbstractService implements IURLManager {
+	
+	private static final Logger _logger = LoggerFactory.getLogger(AbstractURLManager.class);
 	
 	/**
 	 * Crea e restituisce un oggetto PageURL.<br>
@@ -57,24 +63,31 @@ public abstract class AbstractURLManager extends AbstractService implements IURL
 	
 	protected String createQueryString(Map<String, String> params, boolean escapeAmp) {
 		String queryString = "";
-		if (params != null && !params.isEmpty()) {
-			StringBuilder buf = new StringBuilder();
-			buf.append("?");
-			Iterator<String> keyIter = params.keySet().iterator();
-			int index = 1;
-			while (keyIter.hasNext()) {
-				String name = keyIter.next();
-				buf.append(name).append("=").append(params.get(name));
-				if (index != params.size()) {
-					if (escapeAmp) {
-						buf.append("&amp;");
-					} else {
-						buf.append("&");
+		try {
+			if (params != null && !params.isEmpty()) {
+				StringBuilder buf = new StringBuilder();
+				buf.append("?");
+				Iterator<String> keyIter = params.keySet().iterator();
+				int index = 1;
+				while (keyIter.hasNext()) {
+					String name = keyIter.next();
+					String safeName = ESAPI.encoder().encodeForURL(name);
+					String safeValue = ESAPI.encoder().encodeForURL(params.get(name));
+					buf.append(safeName).append("=").append(safeValue);
+					if (index != params.size()) {
+						if (escapeAmp) {
+							buf.append("&amp;");
+						} else {
+							buf.append("&");
+						}
+						index++;
 					}
-					index++;
 				}
+				queryString = buf.toString();
 			}
-			queryString = buf.toString();
+		} catch (Exception ex) {
+			_logger.error("Error encoding parameters", ex);
+			throw new RuntimeException("Error encoding parameters", ex);
 		}
 		return queryString;
 	}

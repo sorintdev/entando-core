@@ -58,7 +58,6 @@ public class CategoriesTag extends TagSupport {
 			this.pageContext.setAttribute(this.getVar(), categories);
 		} catch (Throwable t) {
 			_logger.error("Error starting tag", t);
-			//ApsSystemUtils.logThrowable(t, this, "doStartTag");
 			throw new JspException("Error starting tag", t);
 		}
 		return super.doStartTag();

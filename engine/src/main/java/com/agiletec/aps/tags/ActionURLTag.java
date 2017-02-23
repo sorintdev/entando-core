@@ -32,6 +32,8 @@ import com.agiletec.aps.system.services.url.IURLManager;
 import com.agiletec.aps.system.services.url.PageURL;
 import com.agiletec.aps.tags.util.IParameterParentTag;
 import com.agiletec.aps.util.ApsWebApplicationUtils;
+import org.owasp.esapi.ESAPI;
+import org.owasp.esapi.errors.EncodingException;
 
 /**
  * Build the URL to call a functionality of a servlet defined within the system.
@@ -65,7 +67,9 @@ public class ActionURLTag extends TagSupport implements IParameterParentTag {
 				Iterator<String> iter = this.getParameters().keySet().iterator();
 				while (iter.hasNext()) {
 					String name = (String) iter.next();
-					pageUrl.addParam(name, this.getParameters().get(name));
+					String safeName = ESAPI.encoder().encodeForURL(name);
+					String safeValue = ESAPI.encoder().encodeForURL(this.getParameters().get(name));
+					pageUrl.addParam(safeName, safeValue);
 				}
 			}
 			String path = pageUrl.getURL();
@@ -74,9 +78,11 @@ public class ActionURLTag extends TagSupport implements IParameterParentTag {
 			} else {
 				this.pageContext.getOut().print(path);
 			}
+		} catch (EncodingException ex) {
+			_logger.error("Error encoding parameters", ex);
+			throw new JspException("Error encoding parameters", ex);
 		} catch (IOException e) {
 			_logger.error("Error closing tag", e);
-			//ApsSystemUtils.logThrowable(e, this, "doEndTag");
 			throw new JspException("Error closing tag ", e);
 		}
 		this.release();

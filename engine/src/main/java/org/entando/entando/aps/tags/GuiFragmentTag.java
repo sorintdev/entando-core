@@ -32,6 +32,7 @@ import org.apache.commons.lang.StringUtils;
 import org.entando.entando.aps.system.services.controller.executor.ExecutorBeanContainer;
 import org.entando.entando.aps.system.services.guifragment.GuiFragment;
 import org.entando.entando.aps.system.services.guifragment.IGuiFragmentManager;
+import org.owasp.esapi.ESAPI;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -60,7 +61,7 @@ public class GuiFragmentTag extends ExtendedTagSupport {
                 if (this.getEscapeXml()) {
                     out(this.pageContext, this.getEscapeXml(), extractedValue);
                 } else {
-                    this.pageContext.getOut().print(extractedValue);
+                    this.pageContext.getOut().print(ESAPI.encoder().encodeForHTML(extractedValue.toString()));
                 }
             }
         } catch (Throwable t) {

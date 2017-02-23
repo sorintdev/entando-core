@@ -26,6 +26,7 @@ import com.agiletec.aps.system.services.lang.ILangManager;
 import com.agiletec.aps.system.services.lang.Lang;
 import com.agiletec.aps.util.ApsWebApplicationUtils;
 import org.entando.entando.aps.tags.ExtendedTagSupport;
+import org.owasp.esapi.ESAPI;
 
 /**
  * Tag for string localisation
@@ -53,7 +54,7 @@ public class I18nTag extends ExtendedTagSupport {
 				if (this.getEscapeXml()) {
 					out(this.pageContext, this.getEscapeXml(), label);
 				} else {
-					this.pageContext.getOut().print(label);
+					this.pageContext.getOut().print(ESAPI.encoder().encodeForHTML(label));
 				}
 			}
 		} catch (Throwable t) {

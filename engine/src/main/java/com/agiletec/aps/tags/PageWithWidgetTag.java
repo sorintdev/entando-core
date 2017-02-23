@@ -53,7 +53,6 @@ public class PageWithWidgetTag extends TagSupport {
 			}
 		} catch (Throwable t) {
 			_logger.error("Error in doStartTag", t);
-			//ApsSystemUtils.logThrowable(t, this, "doStartTag");
 			throw new JspException("Error in doStartTag", t);
 		}
 		return super.doStartTag();

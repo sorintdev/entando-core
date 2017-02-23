@@ -130,8 +130,8 @@ public class InternalServletTag extends TagSupport {
 				this.pageContext.getOut().print(output);
 			}
 		} catch (Throwable t) {
-			_logger.error("Error in widget preprocessing", t);
 			String msg = "Error in widget preprocessing";
+			_logger.error(msg, t);
 			throw new JspException(msg, t);
 		}
 		return result;

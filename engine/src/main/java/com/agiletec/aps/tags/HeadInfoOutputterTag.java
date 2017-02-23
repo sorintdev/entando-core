@@ -35,6 +35,7 @@ import com.agiletec.aps.tags.util.HeadInfoContainer;
 @SuppressWarnings("serial")
 public class HeadInfoOutputterTag extends TagSupport {
 	
+	@Override
 	public int doStartTag() throws JspException {
 		ServletRequest request =  this.pageContext.getRequest();
 		RequestContext reqCtx = (RequestContext) request.getAttribute(RequestContext.REQCTX);
@@ -51,6 +52,7 @@ public class HeadInfoOutputterTag extends TagSupport {
 		return retVal;
 	}
 	
+	@Override
 	public int doAfterBody() throws JspException {
 		int retVal;
 		this._index++;
@@ -66,6 +68,7 @@ public class HeadInfoOutputterTag extends TagSupport {
 		return this._infos.get(this._index);
 	}
 	
+	@Override
 	public void release() {
 		this._type = null;
 		this._infos = null;

@@ -60,7 +60,6 @@ public class CurrentPageTag extends PageInfoTag {
 			this.evalValue();
 		} catch (Throwable t) {
 			_logger.error("error in doStartTag", t);
-			//ApsSystemUtils.logThrowable(t, this, "doStartTag");
 			throw new JspException("Error during tag initialization ", t);
 		}
 		return EVAL_PAGE;

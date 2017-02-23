@@ -65,7 +65,6 @@ public class NavigatorTag extends TagSupport {
 			return EVAL_BODY_INCLUDE;
 		} catch (Throwable t) {
 			_logger.error("Error during tag initialization", t);
-			//ApsSystemUtils.logThrowable(t, this, "doStartTag");
 			throw new JspException("Error during tag initialization ", t);
 		}
 	}

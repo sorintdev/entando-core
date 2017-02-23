@@ -36,6 +36,7 @@ public class ResourceURLTag extends TagSupport {
 
 	private static final Logger _logger = LoggerFactory.getLogger(ResourceURLTag.class);
 	
+	@Override
 	public int doEndTag() throws JspException {
 		try {
 			if (null == _root) {
@@ -48,7 +49,6 @@ public class ResourceURLTag extends TagSupport {
 			pageContext.getOut().print(_root + _folder);
 		} catch (Throwable t) {
 			_logger.error("Error closing the tag", t);
-			//ApsSystemUtils.logThrowable(t, this, "doEndTag");
 			throw new JspException("Error closing the tag", t);
 		}
 		return EVAL_PAGE;

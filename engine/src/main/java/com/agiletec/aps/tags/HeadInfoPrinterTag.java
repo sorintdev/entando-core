@@ -27,6 +27,7 @@ public class HeadInfoPrinterTag extends TagSupport {
 
 	private static final Logger _logger = LoggerFactory.getLogger(HeadInfoPrinterTag.class);
 	
+	@Override
 	public int doEndTag() throws JspException {
 		HeadInfoOutputterTag parent = 
 			(HeadInfoOutputterTag) findAncestorWithClass(this, HeadInfoOutputterTag.class);
@@ -35,7 +36,6 @@ public class HeadInfoPrinterTag extends TagSupport {
 			this.pageContext.getOut().print(info);
 		} catch (Throwable t) {
 			_logger.error("error in doEndTag", t);
-			//ApsSystemUtils.logThrowable(t, this, "doEndTag");
 			throw new JspException("Error closing tag ", t);
 		}
 		return EVAL_PAGE;

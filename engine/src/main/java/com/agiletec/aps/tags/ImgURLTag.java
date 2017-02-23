@@ -18,6 +18,7 @@ package com.agiletec.aps.tags;
  */
 public class ImgURLTag extends ResourceURLTag {
 	
+	@Override
 	public int doStartTag() throws javax.servlet.jsp.JspException {
 		this.setFolder("static/img/");
 		return EVAL_BODY_INCLUDE;

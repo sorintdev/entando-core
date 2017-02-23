@@ -76,7 +76,6 @@ public class PageInfoTag extends ExtendedTagSupport implements IParameterParentT
 			this.evalValue();
 		} catch (Throwable t) {
 			_logger.error("Error during tag initialization", t);
-			//ApsSystemUtils.logThrowable(t, this, "doStartTag");
 			throw new JspException("Error during tag initialization ", t);
 		}
 		this.release();

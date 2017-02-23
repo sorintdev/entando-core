@@ -40,9 +40,11 @@ import com.agiletec.aps.util.ApsWebApplicationUtils;
 public class URLTag extends TagSupport implements IParameterParentTag {
 
 	private static final Logger _logger = LoggerFactory.getLogger(URLTag.class);
-
+	
 	/**
 	 * Prepares a PageURL object; this object may comprehend several sub-tags
+	 * @return The result code
+	 * @throws javax.servlet.jsp.JspException In case of error
 	 */
 	@Override
 	public int doStartTag() throws JspException {
@@ -72,6 +74,8 @@ public class URLTag extends TagSupport implements IParameterParentTag {
 	/**
 	 * Completes the URL generation making it available for immediate
 	 * output or placing it in a variable
+	 * @return The result code
+	 * @throws javax.servlet.jsp.JspException In case of error
 	 */
 	@Override
 	public int doEndTag() throws JspException {

@@ -18,6 +18,7 @@ import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.PageContext;
 import javax.servlet.jsp.tagext.TagSupport;
 import org.apache.commons.lang.StringEscapeUtils;
+import org.owasp.esapi.ESAPI;
 
 /**
  * @author E.Santoboni
@@ -53,7 +54,7 @@ public abstract class ExtendedTagSupport extends TagSupport {
 		if (null != obj) {
 			String text = (escapeXml) ? StringEscapeUtils.escapeXml(obj.toString()) : obj.toString();
 			JspWriter w = pageContext.getOut();
-			w.write(text);
+			w.write(ESAPI.encoder().encodeForHTML(text));
 		}
 	}
 	

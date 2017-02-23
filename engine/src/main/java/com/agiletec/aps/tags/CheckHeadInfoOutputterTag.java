@@ -26,23 +26,24 @@ import com.agiletec.aps.tags.util.HeadInfoContainer;
 /**
  * Utility tag for the compilation of the header informations.
  * It verifies the availability of the informations of the specified type.
- * 
  * @author E.Santoboni
  */
 public class CheckHeadInfoOutputterTag extends TagSupport {
-
+	
+	@Override
 	public int doStartTag() throws JspException {
 		ServletRequest request =  this.pageContext.getRequest();
 		RequestContext reqCtx = (RequestContext) request.getAttribute(RequestContext.REQCTX);
 		HeadInfoContainer headInfo = (HeadInfoContainer) reqCtx.getExtraParam(SystemConstants.EXTRAPAR_HEAD_INFO_CONTAINER);
 		List<Object> infos = headInfo.getInfos(this.getType());
-		if (infos == null || infos.size() == 0) {
+		if (infos == null || infos.isEmpty()) {
 			return SKIP_BODY;
 		} else {
 			return EVAL_BODY_INCLUDE;
 		}
 	}
-
+	
+	@Override
 	public void release() {
 		this._type = null;
 	}
