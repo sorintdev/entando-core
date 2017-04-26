@@ -121,25 +121,24 @@
 
                 <li class="list-group-item tertiary-nav-item-pf" data-target="integrations-ux-components-tertiary">
                     <a>
-                        <span class="list-group-item-value">Components</span>
+                        <span class="list-group-item-value">UX Components</span>
                     </a>
 
                     <div id="integrations-ux-components-tertiary" class="nav-pf-tertiary-nav">
                         <div class="nav-item-pf-header">
                             <a class="tertiary-collapse-toggle-pf" data-toggle="collapse-tertiary-nav"></a>
-                            <span>Components</span>
+                            <span>UX Components</span>
                         </div>
                         <ul class="list-group">
                             <li class="list-group-item ">
-                                <a>
-                                    <span id="compute-containers-users-nav-item" class="list-group-item-value">TO_DO</span>
-
+                                <a href='<s:url action="viewSenders" namespace="/do/jpmail/MailConfig" />'>
+                                    <span class="list-group-item-value">Email Management</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                </li>                    
-				<c:if test="${isSuperUser}">
+                </li>
+                <c:if test="${isSuperUser}">
                 <li class="list-group-item tertiary-nav-item-pf" data-target="integrations-api-tertiary">
                     <a>
                         <span class="list-group-item-value">API Management</span>
