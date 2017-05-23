@@ -85,6 +85,11 @@
                         <th><s:text name="widget.name" /></th>
                         <th><s:text name="widget.code" /></th>
                         <th class="table-w-5 text-center "><span title="<s:text name="title.widgetManagement.howmanypages.long" />"><s:text name="widget.time.used" /></span></th>
+                        <wpsa:hookPoint key="core.showletType.list.table.th" objectName="hookPointElements_core_showletType_list_table_th">
+                            <s:iterator value="#hookPointElements_core_showletType_list_table_th" var="hookPointElement">
+                                <wpsa:include value="%{#hookPointElement.filePath}"></wpsa:include>
+                            </s:iterator>
+                        </wpsa:hookPoint>
                         <th class="table-w-5"><s:text name="title.pageActions" /></th>
                     </tr>
                 </thead>
@@ -110,6 +115,11 @@
                                     <s:property value="#showletUtilizers.size()" />
                                 </span>
                             </td>
+                            <wpsa:hookPoint key="core.showletType.list.table.td" objectName="hookPointElements_core_showletType_list_table_td">
+                                <s:iterator value="#hookPointElements_core_showletType_list_table_td" var="hookPointElement">
+                                    <wpsa:include value="%{#hookPointElement.filePath}"></wpsa:include>
+                                </s:iterator>
+                            </wpsa:hookPoint>
                             <td class=" table-view-pf-actions">
                                 <wp:ifauthorized permission="superuser">
                                     <s:if test="#concreteShowletTypeVar.isLogic()">
@@ -175,11 +185,6 @@
                                         </div>
                                     </s:if>
                                 </wp:ifauthorized>
-                                <wpsa:hookPoint key="core.showletType.list.table.td" objectName="hookPointElements_core_showletType_list_table_td">
-                                    <s:iterator value="#hookPointElements_core_showletType_list_table_td" var="hookPointElement">
-                                        <wpsa:include value="%{#hookPointElement.filePath}"></wpsa:include>
-                                    </s:iterator>
-                                </wpsa:hookPoint>
                             </td>
                         </tr>
                     </s:iterator>
